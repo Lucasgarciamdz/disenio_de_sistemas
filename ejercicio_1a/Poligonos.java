@@ -1,16 +1,32 @@
 package ejercicio_1a;
 
-public class Poligonos{
+import java.util.List;
 
-    protected int[][] lados;
+public abstract class Poligonos extends Figura {
 
-    public Poligonos(int[] x, int[] y) {
-        int n = x.length;
-        this.lados = new int[n][2];
-        for (int i = 0; i < n; i++) {
-            this.lados[i][0] = x[i];
-            this.lados[i][1] = y[i];
-        }
+    private List<Lados> lados;
+    private int numeroLados;
+
+    protected Poligonos(String nombre, List<Lados> lados) {
+        super(nombre);
+        this.numeroLados = lados.size();
+        this.lados = lados;
+    }
+
+    public List<Lados> getLados() {
+        return lados;
+    }
+
+    public void setLados(List<Lados> lados) {
+        this.lados = lados;
+    }
+
+    public int getNumeroLados() {
+        return numeroLados;
+    }
+
+    public void setNumeroLados(int numeroLados) {
+        this.numeroLados = numeroLados;
     }
 
 }

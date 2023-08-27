@@ -1,19 +1,20 @@
 package ejercicio_1a;
 
-public class Triangulos extends Poligonos implements Figuras{
-    
+import java.util.List;
 
-    public Triangulos(int[] x, int[] y) {
-        super(x, y);
-        //TODO Auto-generated constructor stub
+public class Triangulos extends Poligonos{
+
+    protected Triangulos(String nombre, List<Lados> lados) {
+        super(nombre, lados);
     }
 
-    public double area() {
-        return 0.0;
+    @Override
+    public double calcularArea() {
+        return 0; // cada triangulo tiene su propia formula
     }
 
-    public double perimetro() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'perimetro'");
+    @Override
+    public double calcularPerimetro() {
+        return 0; // cada triangulo tiene su propia formula
     }
 }
